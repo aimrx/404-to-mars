@@ -1,0 +1,9 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  cursor: url(../img/imagen\ cursor.png), auto;
+}
+
+html {
+  background-color: #171e35;
+}
