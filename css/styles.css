@@ -2,7 +2,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: #fff;
-  cursor: url(../img/imagen\ cursor.png), auto;
+  cursor: url(../assets/images/cursor.png), auto;
 }
 
 h2 {
@@ -54,7 +54,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2rem;
-  text-transform: uppercase;
   color: #fff4e0;
 }
 
@@ -89,24 +88,26 @@ body {
 }
 
 .bottom-content h1 {
-  font-size: 3rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  font-size: 4rem;
+  color: #3c2211;
 }
 
 .bottom-content button {
   background-color: #e55676;
   color: #fff4e0;
   font-family: poppins;
-  border: none;
+  border: solid;
+  border-color: #3c2211;
+  border-width: 2.5px;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 50px;
   transition: background-color 0.3s ease;
 }
 
 .bottom-content button:hover {
-  background-color: #7f1e2e;
+  background-color: #eb718f;
 }
 
 /* Responsiveness */
