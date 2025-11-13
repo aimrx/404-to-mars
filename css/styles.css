@@ -10,9 +10,7 @@ html {
 
 .parallax-container {
   position: relative;
-  height: 100vh;
-  overflow: x-hidden;
-  overflow-y: auto;
+  height: 350vh;
   perspective: 1px;
 }
 
