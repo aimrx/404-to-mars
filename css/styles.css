@@ -5,6 +5,10 @@ body {
   cursor: url(../assets/images/cursor.png), auto;
 }
 
+h1 {
+  font-weight: 600;
+}
+
 h2 {
   font-size: 24pt;
 }
@@ -50,16 +54,21 @@ body {
 
 .top-text {
   position: absolute;
-  top: 50%;
+  top: 32%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2rem;
   color: #fff4e0;
 }
 
+.second-text p {
+  margin-top: 260px;
+  padding-top: 260px;
+}
+
 /* Spacer between top and bottom PNGs */
 .spacer {
-  height: 10vh;
+  height: 50vh;
 }
 
 /* --- Bottom section --- */
@@ -88,21 +97,19 @@ body {
 }
 
 .bottom-content h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #3c2211;
 }
 
 .bottom-content button {
-  background-color: #e55676;
+  background-color: #3c2211;
   color: #fff4e0;
   font-family: poppins;
-  border: solid;
-  border-color: #3c2211;
-  border-width: 2.5px;
   padding: 1rem 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
   border-radius: 50px;
+  border-style: none;
   transition: background-color 0.3s ease;
 }
 
@@ -114,6 +121,11 @@ body {
 @media (max-width: 768px) {
   .top-text {
     font-size: 15pt;
+  }
+
+  .second-text p {
+    margin-top: 200px;
+    padding-top: 200px;
   }
 
   .bottom-content {
