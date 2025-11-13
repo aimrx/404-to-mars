@@ -1,52 +1,199 @@
-/* Reset / básico */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  cursor: url(../img/imagen\ cursor.png), auto;
+}
+
+h2 {
+  font-size: 24pt;
+}
+
+/* NEW */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
-  margin: 0;
-}
-body {
-  font-family: "Poppins", sans-serif;
-  color: #fff;
-  background-color: #171e35;
   overflow-x: hidden;
-  cursor: url(../assets/images/cursor\ image.png), auto;
 }
 
-.parallax-js-section {
+/* Parallax background */
+.parallax {
   position: relative;
-  height: 350vh;
-  overflow: hidden;
+  min-height: 200vh;
+  background: url("https://ik.imagekit.io/DianaVaquerizoImg/back.PNG?updatedAt=1763050714373")
+    center center / cover no-repeat fixed;
 }
 
-/* capas y tamaño */
-.parallax-layer {
-  position: absolute;
+/* Shared overlay setup */
+.overlay {
   width: 100%;
-  height: 100%;
-  inset: 0;
-  display: flex;
-  justify-content: top;
-  align-items: top;
-  will-change: transform;
+  text-align: center;
+  position: relative;
 }
 
-/* imágenes: cubrir pantalla y responsive */
-.parallax-image,
-.moon-image {
+.layer-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
-  transform: translate3d(0, 0, 0);
-  will-change: transform;
 }
 
-/* Opcional: adaptación para pantallas muy estrechas */
-@media (max-width: 600px) {
-  .parallax-container {
-    height: 300vh;
+/* --- Top section --- */
+.overlay.top {
+  position: relative;
+}
+
+.top-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff4e0;
+}
+
+/* Spacer between top and bottom PNGs */
+.spacer {
+  height: 10vh;
+}
+
+/* --- Bottom section --- */
+.overlay.bottom {
+  position: relative;
+}
+
+/* This makes the bottom overlay stay fixed at bottom */
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Text and button on bottom image */
+.bottom-content {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.bottom-content h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.bottom-content button {
+  background-color: #e55676;
+  color: #fff4e0;
+  font-family: poppins;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.bottom-content button:hover {
+  background-color: #7f1e2e;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .top-text {
+    font-size: 15pt;
+  }
+
+  .bottom-content {
+    flex-direction: column;
+    gap: 1rem;
+    bottom: 5%;
+    padding: 0 5%;
+  }
+
+  .bottom-content h1 {
+    font-size: 2rem;
+  }
+
+  .bottom-content button {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+/*Mobile responsiveness*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .bottom img {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .fixed-bottom img {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .bottom-content {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .spacer {
+    height: 10vh;
+  }
+}
+
+/*Tablet responsiveness*/
+@media (min-width: 481px) and (max-width: 960px) {
+  .bottom img {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .fixed-bottom img {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .bottom-content {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .spacer {
+    height: 80vh;
+  }
+}
+
+/*Tablet responsiveness*/
+@media (min-width: 961px) and (max-width: 1000px) {
+  .bottom img {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .fixed-bottom img {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .bottom-content {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .spacer {
+    height: 80vh;
   }
 }

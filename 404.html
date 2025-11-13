@@ -27,45 +27,40 @@
   </head>
 
   <body>
-    <audio controls autoplay loop>
-      <source src="./assets/audio/Greatgig.mp3" type="audio/mpeg" />
+    <audio controls autoplay loop hidden>
+      <source src="assets/audio/Greatgig.mp3" type="audio/mp3" />
       Your browser does not support the audio element.
     </audio>
 
-    <div class="parallax-js-section">
-      <div class="parallax-layer layer-back">
+    <div class="parallax">
+      <!-- Top overlay -->
+      <div class="overlay top">
         <img
-          src="./assets/images/stars image.PNG"
-          alt="stars"
-          class="parallax-image"
+          src="assets/images/cabra.PNG"
+          alt="Top Layer"
+          class="layer-image"
         />
+        <p class="top-text">
+          Sorry for the delay, we are working on finding Mars. It might take
+          some time, but you can scroll down and see what happens…
+        </p>
       </div>
 
-      <div class="parallax-layer goat-layer">
-        <img
-          src="./assets/images/goat image.PNG"
-          alt="goat"
-          class="moon-image"
-        />
-      </div>
+      <!-- Spacer for scrollable area -->
+      <div class="spacer"></div>
 
-      <div class="parallax-layer layer_middle">
+      <!-- Bottom overlay (fixed) -->
+      <div class="overlay bottom fixed-bottom">
         <img
-          src="./assets/images/planets image.PNG"
-          alt="planets"
-          class="parallax-image"
+          src="assets/images/luna.PNG"
+          alt="Bottom Layer"
+          class="layer-image"
         />
-      </div>
-
-      <div class="parallax-layer moon-layer">
-        <img
-          src="./assets/images/moon image.PNG"
-          alt="moon"
-          class="moon-image"
-        />
+        <div class="bottom-content">
+          <h1>Error 404</h1>
+          <button onclick="history.back()">Go Back</button>
+        </div>
       </div>
     </div>
-
-    <script src="parallax.js"></script>
   </body>
 </html>
