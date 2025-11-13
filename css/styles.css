@@ -1,26 +1,52 @@
+/* Reset / básico */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
 body {
   font-family: "Poppins", sans-serif;
   color: #fff;
-  cursor: url(../img/imagen\ cursor.png), auto;
-}
-
-html {
   background-color: #171e35;
+  overflow-x: hidden;
+  cursor: url(../assets/images/cursor\ image.png), auto;
 }
 
-.parallax-container {
+.parallax-js-section {
   position: relative;
   height: 350vh;
-  perspective: 1px;
+  overflow: hidden;
 }
 
+/* capas y tamaño */
 .parallax-layer {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  width: 100%;
+  height: 100%;
+  inset: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: top;
+  align-items: top;
+  will-change: transform;
+}
+
+/* imágenes: cubrir pantalla y responsive */
+.parallax-image,
+.moon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* Opcional: adaptación para pantallas muy estrechas */
+@media (max-width: 600px) {
+  .parallax-container {
+    height: 300vh;
+  }
 }
