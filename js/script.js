@@ -24,3 +24,4 @@ window.addEventListener(
   },
   { passive: true }
 );
+audioElement.play();
